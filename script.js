@@ -30,3 +30,10 @@ document.getElementById("typing-text");const fullText = phrases[currentPhrase];
 }
 
 type();
+
+
+function toggleMenu(){
+    const nav =
+document.getElementById('nav-links');
+    nav.classList.toggle('show');
+}
