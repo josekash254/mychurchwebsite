@@ -37,3 +37,48 @@ function toggleMenu(){
 document.getElementById('nav-links');
     nav.classList.toggle('show');
 }
+window.addEventListener("scroll",function()
+    {
+        const navbar =document.querySelector(".simple-header");
+        if (window.scrollY > 50) {
+            simple-header.style.background = "rgba(0, 0, 0, 0.85)";
+            simple-header.style.box-shadow ="o 2px 10px rgba(0,0,0,0.3";
+        } else {
+            simple-header.background ="tranparent";
+            simple-header.boxshadow="none";
+        }
+    })
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const captionText = document.getElementById('caption');
+  const closeBtn = document.querySelector('.close');
+  const galleryItems = document.querySelectorAll('.gallery-item img');
+
+  galleryItems.forEach(img => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modalImg.src = img.dataset.full || img.src;
+      captionText.textContent = img.alt;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Close modal when clicking outside the image
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  // Close modal on ESC key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      modal.style.display = 'none';
+    }
+  });
+});

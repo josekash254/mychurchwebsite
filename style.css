@@ -12,9 +12,188 @@ body{
     color: #111;
     line-height: 1.6;
 }
+/* -------------------
+   HOMEPAGE IMPROVEMENTS
+-------------------- */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* HERO SECTION enhancements */
+.hero {
+  position: relative;
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hero-text h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.hero-text h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Overlay enhancement */
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Fix text position above overlay */
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Improved INVITE section */
+.invite {
+  background-color: #f8f9fa;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.invite h2 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.invite p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #555;
+}
+
+/* EVENTS section improvement */
+.events {
+  background: url("image/images.jpeg") no-repeat center center/cover;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+
+
+.events h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.event-container {
+  position: relative;
+  z-index: 1;
+}
+
+.homepage-video {
+  background: #f0f0f0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.homepage-video h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* CHURCH LIFE / Gallery improvements */
+.photo-gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.gallery-grid {
+  margin-top: 20px;
+}
+
+/* Centered footer improvement */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 1rem;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+
+/* Button hover fix */
+.btn:hover {
+  background: #2980b9;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Typing text section improvement */
+.typing-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#typing-text {
+  font-size: 1.8rem;
+  color: #3498db;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1rem;
+  }
+
+  .hero-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .invite h2,
+  .homepage-video h2,
+  .events h2 {
+    font-size: 2rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
 
 .hero{
-    background: url('image/worship.jpg')no-repeat center center/cover;
+    background: url('image/logo.jpg')no-repeat center center/cover;
     height: 100vh;
     color: #fff;
     display: flex;
@@ -28,14 +207,14 @@ body{
 
 .overlay{
     position:absolute;
-    top:0; left 0;
+    top:0, left 0;
     height: 100%;
-    width:100%;
+    width:50%;
     background: rgba(0,0,0,0.5);
     z-index: 1;
 }
 
-.navbar {
+.simple-header {
     position: fixed;
     z-index:  1000;
     display: flex;
@@ -49,7 +228,7 @@ body{
 }  
 
 
-.nav-links {
+.simple-header {
     display:flex;
     justify-content: center;
     gap: 40px;
@@ -57,14 +236,14 @@ body{
     margin:o;
     padding:0;
 }
-.nav-links li a {
+.simple-header {
     text-decoration:none;
     color:white;
     font-size: 18px;
     font-weight:600;
     transition:color 0.3s;
 }
-.nav-links li a:hover {
+.simple-header:hover {
     color: #ffd700;
 }
 .hamburger {
@@ -73,7 +252,28 @@ body{
     color:white;
     cursor: pointer;
 }
- @
+@midea (max-width:768px) {
+}
+    .nav-links {
+        display:none;
+        flex-direction:colomn;
+        background:rgba(0, 0, 0, 0.9);
+        position:absolute;
+        top:60px;
+        left:width;
+        text-align:center;
+    }
+    .nav-links a{
+        margin: 15px 0;
+        color:white;
+    }
+    .nav-links.show{
+        display: flex;
+    }
+    .hamburger{
+        display:block;
+    }
+ 
 
 .hero-text{
     z-index: 2;
@@ -81,17 +281,32 @@ body{
     margin-bottom: 190px;
     animation:fadeIn 2s ease-in;
 }
+
 .hero-text h1{
-    font-size: 3.5rem;
-    line-height: 3;
+    font-size: 4rem;
+    margin-top: 100px;
+    line-height: 1;
     font-weight:bold;
     color: #fff;
-    text-shadow; 2px 2px 10px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    font-family:'Times New Roman', Times, serif;
+}
+.hero-text h2{
+    font-size: 4rem;
+    line-height: 2;
+    font-weight:bold;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    font-family: 'Times New Roman', Times, serif;
 
 }
+.hero-text h3{
+    font-size:2rem ;
+}
+
 .invite{
     background:#fff;
-    padding:70px 20px;
+    padding:100px 100px;
     text-align:center;
 }
 .invite h2{
@@ -110,7 +325,8 @@ body{
     text-decoration:none;
     border-radius:30px;
     font-size:1rem;
-    transition:0.3s:
+    transition:0.3s;
+    justify-content: center;
 }
 
 
@@ -121,7 +337,7 @@ body{
     color:#111;
 }
 @keyframes fadeIn{
-    from{opacity: 0; transform;translateY(20px); }
+    from{opacity: 0; transform:translateY(20px); }
     to{opacity: 1;transform:translateY(0);}
 }
 main{
@@ -156,6 +372,13 @@ section p{
     border-radius: 5px ;
     transition:background 0.3s;
 }
+.homepage-video .btn {
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+    width: fit-content;
+}
+
 
 .btw:hover {
     background-color: #2980b9;
@@ -215,9 +438,15 @@ footer{
     color: #333;
 }
 .simple-header{
-    background: #222;
-    padding: 20px;
+    background-color: transparent;
+    padding: 10px;
     text-align: center;
+    width:100%;
+    position:fixed;
+    z-index: 1000;
+    top:0;
+    transition:background 0.3 ease,box-shadow 0.3 ease;
+    gap: 40px;
 }
 
 .simple-header nav a{
@@ -279,7 +508,7 @@ footer{
 
 .sermon-card iframe{
     width: 100%;
-    height:180px%;
+    height:180px;
     border-radius: 10px;
 }
 .homepage-video iframe{
@@ -412,3 +641,123 @@ min-width: 250px;
     color:#555;
     margin-bottom:10px;
 }
+.church-logo{
+    position:absolute;
+    top:50px;
+    left:20px;
+    height: 200px;
+    width:auto;
+    border-radius:100px;
+    z-index: 1000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0 20px;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 40px 0 20px;
+  background-color: #f4f4f4;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 0 25px #000;
+}
+
+#caption {
+  margin: 15px auto 30px;
+  text-align: center;
+  color: #ccc;
+  font-size: 1.1rem;
+  max-width: 80%;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .gallery-item img {
+    height: 120px;
+  }
+}
+
