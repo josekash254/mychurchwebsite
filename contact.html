@@ -1,6 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Heaven Forever Church</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
+
+
+  <header class="simple-header">
+    <nav id="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="sermons.html">SERMONS</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="gallery.html">GALLERY</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">≡</div>
+  </header>
+
+  <section class="sermon-banner">
+    <div class="banner-text">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you!</p>
+    </div>
+  </section>
+
+  <main class="contact-page">
+
+    <section class="contact-info">
+      <h2>Get in Touch</h2>
+      <ul>
+        <li><strong>📞 Phone:</strong> +254 712 345 678</li>
+        <li><strong>📧 Email:</strong> info@heavenforeverchurch.org</li>
+        <li><strong>📍 Address:</strong> Nairobi, Kenya</li>
+        <li><strong>🕒 Sunday Service:</strong> 10:00 AM – 12:00 PM</li>
+      </ul>
+    </section>
+
+    <section class="map-section">
+      <h2>Find Us</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=YOUR_REAL_EMBED_CODE"
+        width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+      </iframe>
+    </section>
+>
+    <section class="contact-form">
+      <h2>Send a Message</h2>
+      <form action="#" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Heaven Forever Church. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

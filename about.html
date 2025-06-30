@@ -1,100 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport"
-content="width=device-width,intial-scale=1.0"/>
-    <title>about us - heaven forever church</title>
-    <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Heaven Forever Church</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-    <header class="simple-header">
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="sermons.html">SERMONS</a>
-            <a href="contact.html">CONTACT</a>
-        </nav>
-    </header>
-    <section class="sermon-banner">
-        <img src="image/logo.jpg" alt="church logo" class="logo-corner">
+  <header class="simple-header">
+    <nav id="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="sermons.html">SERMONS</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="gallery.html">GALLERY</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">≡</div>
+  </header>
 
-        <div class="banner-text">
-        <h1>About <br>our Church</h1>
+  <section class="sermon-banner">
+    <img src="image/logo.jpg" alt="church logo" class="logo-corner">
+    <div class="banner-text">
+      <h1>About Our Church</h1>
+      <p>Discover our mission, vision, and the heart of Heaven Forever Church</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="about-section alt">
+  <div class="about-container reverse">
+    <div class="about-text">
+      <h2>Meet Our Bishop</h2>
+      <p>apostal is the spiritual overseer of Heaven Forever Church, providing visionary leadership and covering to the entire ministry.</p>
+      <p>He has been in ministry for over 25 years and is passionate about seeing revival spread across nations through prayer, holiness, and power in the Word.</p>
+      <p><strong>"Then I will give you shepherds after my own heart, who will lead you with knowledge and understanding." — Jeremiah 3:15</strong></p>
+    </div>
+    <div class="pastor-image">
+      <img src="image/mum.jpg" alt="apostal">
+    </div>
+  </div>
+</section>
+ 
+    <section class="about-section">
+      <div class="about-container">
+        <div class="pastor-image">
+          <img src="image/pastor.jpg" alt="Pastor George">
         </div>
+        <div class="about-text">
+          <h2>Meet Our Pastor</h2>
+          <p>Pastor George Mburu has been faithfully leading our church community for over 10 years. His passion is to see lives transformed through the Gospel of Jesus Christ.</p>
+          <p>He loves teaching the Word, building strong families, and creating a place where everyone feels at home.</p>
+          <p><strong>"Shepherd the flock of God that is among you." — 1 Peter 5:2</strong></p>
+        </div>
+      </div>
     </section>
-    
-    <main>
-        <section class="about-section">
-            <div class="about-container">
-                <div class="pastor-image">
-                    <img src="image/pastor.jpg" alt="pastor George">
-                </div>
-                <div class="about-text">
-                    <h2>Meet our pastor</h2>
-                    <p>Pastor George Mburu has been faithfully leading our church communty for over the 10 years
-.His passion is see lives transformed througm the gospel of Jesus Chirst.</p>
-                    <p>He loves teaching the word,bulding strong families,and creating a place where everybody feels at home.</p>
-                    </p>
-                    <p><strong>"sherphed the flock of God that is among you."- 1 peter 5:2</strong></p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="about-section alt">
-            <div class="about-container reverse">
-                <div class="about-text">
-                    <h2>Our Mission</h2>
-                    <p>At Heaven Forever Church, Our mission is to reach out with the love of Christ and serve our community in faith
-                        ,hope, and compassion.</p>
-                    <p>we believe in growing together ,worshipping together, and transforming lives throug the word of God</p>
-                </div>
-                <div class="pastor-image">
-                    <img src="image/pic11.jpg" alt="church mission">
-                </div>
-            </div>
-        </section>
 
-        <section>
-            <h2>our vision</h2>
-            <p>to build a Chirst centered community filled with love, faith, and service</p>
+    <section class="about-section alt">
+      <div class="about-container reverse">
+        <div class="about-text">
+          <h2>Our Mission</h2>
+          <p>At Heaven Forever Church, our mission is to reach out with the love of Christ and serve our community in faith, hope, and compassion.</p>
+          <p>We believe in growing together, worshiping together, and transforming lives through the Word of God.</p>
+        </div>
+        <div class="pastor-image">
+          <img src="image/pic11.jpg" alt="Church Mission">
+        </div>
+      </div>
+    </section>
 
-        </section>
+    <section class="about-section">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Our Vision</h2>
+          <p>To build a Christ-centered community filled with love, faith, and service.</p>
+        </div>
+      </div>
+    </section>
 
-        <section>
-            <h2>our history</h2>
-            <p>heaven foever church began in 2011 with a small fellowship and has grown through the yrs and have impacts lives through prayers, outreach, and the word of God. </p>
-        </section>
+    <section class="about-section">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Our History</h2>
+          <p>Heaven Forever Church began in 2011 with a small fellowship and has grown through the years, impacting lives through prayer, outreach, and the Word of God.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    
-    </main>
-    
-    <footer>
-        <p>&copy: 2025 hevean forever church</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Heaven Forever Church. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("show");
+    }
+
+    window.addEventListener("scroll", function () {
+      const navbay = document.querySelector(".simple-header");
+      if (window.scrollY > 50) {
+        navbay.style.background = "rgba(0, 0, 0, 0.85)";
+        navbay.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.3)";
+      } else {
+        navbay.style.background = "transparent";
+        navbay.style.boxShadow = "none";
+      }
+    });
+  </script>
+
 </body>
 </html>
-
-@media (max-width; 768px) {
-    .sermon-banner,
-    .about-banner{
-        height:auto;
-        padding:40px 20px;
-        flex-direction:column;
-    }
-
-    .logo-corner{
-        top:10px;
-        left:10px;
-        height:50px;
-        width:50px;
-    }
-
-    banner-text h1{
-        font-size:28px;
-    }
-    .banner-text p{
-        font-size: 13px;
-    }
-}

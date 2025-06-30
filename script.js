@@ -82,3 +82,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+// Toggle mobile menu
+function toggleMenu() {
+  const navLinks = document.getElementById("nav-links");
+  navLinks.classList.toggle("show");
+}
+
+// Scroll effect on navbar
+window.addEventListener("scroll", function () {
+  const navbay = document.querySelector(".simple-header");
+  if (window.scrollY > 50) {
+    navbay.style.background = "rgba(0, 0, 0, 0.85)";
+    navbay.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.3)";
+  } else {
+    navbay.style.background = "transparent";
+    navbay.style.boxShadow = "none";
+  }
+});
